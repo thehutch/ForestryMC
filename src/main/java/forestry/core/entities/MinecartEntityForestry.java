@@ -80,8 +80,9 @@ public abstract class MinecartEntityForestry extends AbstractMinecart implements
 	public abstract BlockState getDisplayBlockState();
 
 	// cart itemStack
+
 	@Override
-	public abstract ItemStack getCartItem();
+	public abstract ItemStack getPickResult();
 
 	@Override
 	public void destroy(DamageSource damageSource) {
@@ -106,7 +107,7 @@ public abstract class MinecartEntityForestry extends AbstractMinecart implements
 	/* ITitled */
 	@Override
 	public String getUnlocalizedTitle() {
-		ItemStack cartItem = getCartItem();
+		ItemStack cartItem = getPickResult();
 		return cartItem.getDescriptionId();
 	}
 
